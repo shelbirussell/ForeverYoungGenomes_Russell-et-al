@@ -16,9 +16,8 @@
 #include <gsl/gsl_rng.h>
 
 // To check for gsl dependencies in different architectures: gsl-config --libs
-// So, on Odyssey, the compile command is: g++ -std=c++0x -O3 -lgsl -lgslcblas -lm -o SYM_REC SYM_REC.cpp
-
-// g++ -std=c++0x -O3 -lgsl -ltcmalloc -o SYM_REC SYM_REC.cpp
+// a "typical" compile would be:
+// g++ -std=c++0x -O3 -lgsl -ltcmalloc -o symbiont_forward_sim symbiont_forward_sim.cpp
 
 using namespace std;
 
