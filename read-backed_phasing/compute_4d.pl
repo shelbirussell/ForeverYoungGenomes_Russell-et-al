@@ -4,6 +4,7 @@ use warnings ;
 my $min_prop = 0.05 ; 
 my %data ; 
 
+### the following line should be replaced with a shell command that will yield a file list of all inter-host LD files to be considerd
 foreach my $file ( `ls Bathy_Lao*` ) { 
 	chomp $file ; 
 	open IN, "<$file" ;
