@@ -21,17 +21,7 @@ stats = stats[:,[0,2,3,4,5,6,7,8,9,10,11]]
 #Summaries are:
 #4. pi
 #5. s
-#6. prop 4d < 1kb
-#7. 1-3kb
-#8. 3-5kb
-#9. 5-15kb
-#10. 15-30kb
-#11. 30-50kb
-#12. 50-75kb
-#13. 75-100kb
-#14. 100-200kb
-#15. gt200kb
-
+#6. then props 4D of pairs of sites in each distance bin
 
 ## log transfor some variables
 #data[:,[0]] = np.log10(data[:,[0]])
@@ -41,8 +31,7 @@ stats = stats[:,[0,2,3,4,5,6,7,8,9,10,11]]
 ### get the prediction and data summaries split
 data_predict = np.log10(data[:,[2]])
 #data_predict = np.log10(data[:,[0]]*data[:,[1]]) 
-#data_summary = data[:,[3,4,5,6,7,8,9,10,11,12,13,14]]
-data_summary = data[:,[3,5,6,7,8,9,10,11,12,13,14]] 
+data_summary = data[:,[3,4,5,6,7,8,9,10,11,12,13,14]]
 
 # split data into training and test set, for now, we'll just keep 10% for testing
 data_summary_train, data_summary_test, data_predict_train, data_predict_test = xval.train_test_split(data_summary, data_predict, test_size=0.01, random_state=42)
